@@ -1,0 +1,27 @@
+.Main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.Main > .card1 {
+  display: contents; 
+}
+
+.Main > .card1 > .second-card {
+
+  display: contents;
+}
+
+.Main > .card1 > .second-card .card {
+  border: 2px solid #4b6cb7;
+}
+
+.Main > .card1 > .second-card .card::before {
+  background-color: #4b6cb7;
+}
+.Main > .card1 > .second-card .image {
+  box-shadow: 0 0 0 5px #4b6cb7;
+}

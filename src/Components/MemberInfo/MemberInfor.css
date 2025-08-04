@@ -1,0 +1,128 @@
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profilecard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.card {
+  position: relative;
+  width: 340px;
+  background: #fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 40px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: .4s ease-in-out;
+  animation: showcard 0.2s ease-out forwards;
+}
+
+@keyframes showcard{
+  0%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  background-color: #0f1c3f;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  border-bottom-left-radius: 100% 30%;
+  border-bottom-right-radius: 100% 30%;
+  z-index: 1;
+}
+
+
+.image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-top: 80px;
+  z-index: 2;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 0 5px #0f1c3f;
+}
+
+h2,
+h3,
+h4,p {
+  margin: 12px 20px;
+  color: #333;
+  z-index: 2;
+  position: relative;
+}
+
+
+.closer-to-pic {
+  margin-top: 10px;
+  font-size: 27px;
+  font-weight: 600;
+  color: #0f1c3f;
+}
+
+
+.card h4 {
+  background-color: #0f1c3f;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin: 10px 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.second-card .card {
+  background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+  border: 2px solid #4b6cb7;
+  border-bottom-left-radius: 21%;
+  border-top-right-radius: 21%;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.second-card .card::before {
+  background-color: #4b6cb7;
+}
+
+.second-card .image {
+  box-shadow: 0 0 0 5px #4b6cb7;
+}
+
+.second-card .closer-to-pic {
+  color: #4b6cb7;
+}
+
+.second-card h4 {
+  background:linear-gradient(150deg,  #465b8d, #050a16);
+}
+
+/* Container for both cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
